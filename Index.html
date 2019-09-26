@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="jQuery.js"></script>
+    <script src="client.js"></script>
+</head>
+<body>
+    <title>Salary Calculator</title>
+    <h1>Salary Calculator</h1>
+    <div>
+        <h2>Add Employee</h2>
+          <!-- Form data collection method 2 -->
+        
+                <input class="js-input-firstname" name="firstname" type="text" placeholder="First Name" />
+                <input class="js-input-lastname" name="lastname" type="text" placeholder="Last Name" />
+                <input class="js-input-idnumber" name="idnumber" type="number" placeholder="ID Number" />
+                <input class="js-input-jobtitle" name="jobtitle" type="text" placeholder="Job Title" />
+                <input class="js-input-annualsalary" name="annualsalary" type="number" placeholder="Annual Salary" />
+
+                <button class="js-btn-employee">Add Employee</button>
+    </div>
+   <div class="container"> 
+       <h2>Employees</h2>
+       <div class=js-demo></div> 
+
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID Number</th>
+                <th>Job Title</th>
+                <th colspan=2>Annual Salary</th>
+            </tr>
+        </thead>
+        <tbody class="js-table-data">
+            <tr>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan=5 class "sumTotal"> Salary total: $ <span id="totalSalaryOut"></span></td> 
+            </tr>
+        </tfoot>
+    </table>
+   </div>
+</body>
+</html>

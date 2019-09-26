@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+    display: block;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+table {
+    background: white;
+    border: 1px solid #3f3f3f;
+    width: 100%;
+}
+
+thead,
+tfoot,
+.dark {
+    background: #666666;
+    color: white;
+}
+tbody > tr:nth-child(odd) {
+    background: #efefef;
+}
+
+tbody > tr > td {
+    border: 1px solid #3f3f3f;
+    padding: 6px;
+}
