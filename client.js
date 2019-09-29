@@ -1,4 +1,5 @@
 let allEmployees = [];
+let salaryLimit = 200000
 
 $(document).ready(onReady);
 
@@ -53,10 +54,13 @@ function render(){
 
     
         tableElement.empty();
-        let totalMonthly =0
+        let salaryMonthly = 0;
+        let salaryTotal = 0;
         for (let i = 0; i < allEmployees.length; i++) {
-            const employee = allEmployees[i];
-    
+            let employee = allEmployees[i];
+    salaryMonthly = employee.annualsalary / 12;
+    salaryTotal =+ salaryMonthly;
+
             tableElement.append(`<tr id='row'>
                 <td>${employee.firstname}</td>
                 <td>${employee.lastname}</td>
@@ -65,15 +69,15 @@ function render(){
                 <td>${employee.annualsalary}</td>
             </tr>`);
         
-        totalMonthly += parseInt(allEmployees.annualsalary);
+        salaryMonthly += parseInt((salaryTotal));
         }
     
 
-        let salaryTotal = $('totalSummary')
-        salaryTotal.empty();
-        $('#totalSalaryOut').append( totalMonthly );
+    $('#totalSalaryOut').text('Total Budget: $' +salaryTotal );
+        
+        // $('#totalSalaryOut').append( salaryMonthly  );
 
-        if(totalMonthly > 200000){
+        if(salaryTotal > salaryLimit){
             $('.sumTotal').css('background-color','red');
             $('.sumTotal').css('color', 'yellow');
         }
